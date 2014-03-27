@@ -33,6 +33,10 @@ if (!module.parent) {
 module.exports = koey.callback();
 ```
 
+## Example
+
+checkout a simple [example](https://https://github.com/dead-horse/okey/blob/master/example).
+
 ## Dependencies
 
 to make module's update do not affect the main framework. all the dependencies not required by `okey`, if you use any middlewares, it will remind you to install which module.
