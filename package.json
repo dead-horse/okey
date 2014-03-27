@@ -2,7 +2,7 @@
   "name": "okey",
   "version": "0.0.0",
   "description": "a high layer framework base on koa",
-  "main": "index.js",
+  "main": "lib/application.js",
   "scripts": {
     "test": "make test"
   },
@@ -20,5 +20,34 @@
   "bugs": {
     "url": "https://github.com/dead-horse/okey/issues"
   },
-  "homepage": "https://github.com/dead-horse/okey"
+  "homepage": "https://github.com/dead-horse/okey",
+  "dependencies": {
+    "debug": "^0.7.4",
+    "koa": "^0.5.2",
+    "is-type-of": "^0.0.1",
+    "copy-to": "^0.0.2",
+    "methods": "^0.1.0"
+  },
+  "devDependencies": {
+    "koa-compress": "^1.0.4",
+    "koa-bodyparser": "^0.1.0",
+    "koa-csrf": "^1.0.1",
+    "koa-ejs": "0.0.3",
+    "koa-etag": "^1.2.3",
+    "koa-favicon": "^1.0.1",
+    "koa-fresh": "0.0.3",
+    "koa-gzip": "0.0.3",
+    "koa-jsonp": "0.0.3",
+    "koa-logger": "^1.2.0",
+    "koa-redis": "^0.1.0",
+    "koa-resource-router": "^0.3.0",
+    "koa-rewrite": "^1.1.0",
+    "koa-router": "^3.1.2",
+    "koa-rt": "0.0.2",
+    "koa-sess": "^0.3.0",
+    "koa-static-cache": "^1.0.6"
+  },
+  "engine": {
+    "node": "^0.11.9"
+  }
 }
