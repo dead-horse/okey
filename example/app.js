@@ -18,8 +18,16 @@ var app = okey();
 app.keys = ['okey example key'];
 app.proxy = true;
 app.root = __dirname;
+app.env = 'production';
+
+app.session = {};
+
+app.use(function* setsession(next) {
+  this.session.name = 'foo';
+  console.log(this.session);
+  yield* next;
+});
 
 routes(app);
 
 app.listen(7001);
-console.log('open http://localhost:7001');

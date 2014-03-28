@@ -11,5 +11,7 @@
  */
 
 module.exports = function* () {
-  yield this.render('home');
+  yield this.render('home', {
+    name: this.session.name
+  });
 };
