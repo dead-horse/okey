@@ -24,7 +24,6 @@ app.session = {};
 
 app.use(function* setsession(next) {
   this.session.name = 'foo';
-  console.log(this.session);
   yield* next;
 });
 
