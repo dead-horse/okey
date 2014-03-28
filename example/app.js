@@ -23,10 +23,13 @@ app.env = 'production';
 app.session = {};
 
 app.use(function* setsession(next) {
-  this.session.name = 'foo';
+  this.session.name = this.query.name || 'anonymous';
   yield* next;
 });
 
 routes(app);
 
-app.listen(7001);
+if (!module.parent) {
+  app.listen(7001);
+  console.log('open http://localhost:7001 to visit');
+}
