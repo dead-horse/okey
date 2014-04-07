@@ -6,33 +6,6 @@ it is more like a guide, simplify use koa with so many middlewares.
 
 **under heavy development now. and i still do not completely figure out what `okey` really need.**
 
-## Usage
-
-```js
-var okey = require('okey');
-
-var app = okey('router', 'etag', 'gzip');
-
-okey.session = {
-  // session opts
-};
-okey.static = {
-  // static opts
-};
-okey.csrf = {};
-
-okey.rt = false;
-okey.favicon = false;
-okey.qs = false;
-okey.bodyParser = false;
-
-if (!module.parent) {
-  okey.listen();
-}
-
-module.exports = koey.callback();
-```
-
 ## Example
 
 checkout a simple [example](https://https://github.com/dead-horse/okey/blob/master/example).

@@ -16,11 +16,25 @@ var routes = require('./routes');
 var app = okey();
 
 app.keys = ['okey example key'];
-app.proxy = true;
+
+/**
+ * set root for render and static server
+ */
+
 app.root = __dirname;
+
+/**
+ * force to be production
+ */
+
 app.env = 'production';
 
-app.session = {};
+app.set({
+  cache: true,
+  session: true,
+  csrf: true
+});
+
 
 app.use(function* setsession(next) {
   this.session.name = this.query.name || 'anonymous';
